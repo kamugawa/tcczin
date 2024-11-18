@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Imagens com Scroll</title>
+    <style>
+        /* Estilo para o contêiner das imagens */
+        .banner_container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Estilo para cada imagem */
+        .banner_item {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            border: 2px solid #333;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .banner_item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+
+        /* Efeito de "scroll" ao passar o mouse */
+        .banner_item:hover img {
+            transform: translateY(-50%); /* Ajuste para controlar a quantidade de movimento */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="banner_container">
+        <!-- Item 1 -->
+        <div class="banner_item">
+            <a href="https://seusite1.com">
+                <img src="/assets/images/6.jfif" alt="Imagem 1">
+            </a>
+        </div>
+        
+        <!-- Item 2 -->
+        <div class="banner_item">
+            <a href="https://seusite2.com">
+                <img src="https://via.placeholder.com/300x400" alt="Imagem 2">
+            </a>
+        </div>
+
+        <!-- Adicione mais itens conforme necessário -->
+    </div>
+
+</body>
+</html>
